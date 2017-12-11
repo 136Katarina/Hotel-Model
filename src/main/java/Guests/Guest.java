@@ -1,5 +1,7 @@
 package Guests;
 
+import Rooms.Room;
+
 import java.util.ArrayList;
 
 public class Guest {
@@ -32,6 +34,10 @@ public class Guest {
     }
     public void setLastName(String lastName){
         this.lastName = lastName;
+    }
+
+    public boolean hasMoney(Room room){
+        return wallet >= room.getPrice();
     }
 
     public void add(Guest guest){

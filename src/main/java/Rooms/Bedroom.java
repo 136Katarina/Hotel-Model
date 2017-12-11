@@ -1,18 +1,34 @@
-//package Rooms;
-//
-//
-//public class Bedroom extends Room{
-//
-//    private BedroomType roomType;
-//
-//    public Bedroom(String number, int capacity) {
-//        super(number, capacity);
-//                this.roomType = type;
-//
-//    }
-//
-//
-////    public Bedroom(String number, int capacity, BedroomType type){
-////        super(number, capacity);
-////    }
-//}
+package Rooms;
+
+
+
+public class Bedroom extends Room {
+
+    private String roomName;
+    private BedroomType bedroomType;
+
+
+    public Bedroom( String roomName, BedroomType bedroomType) {
+        super(double price, int capacity);
+
+        this.roomName = roomName;
+        this.bedroomType = bedroomType;
+        this.capacity = bedroomType.getCapacity();
+        this.price = bedroomType.getPrice();
+    }
+
+
+    public String getRoomName(){
+        return  this.roomName;
+    }
+
+    public String getBedroomType(){
+        return  this.bedroomType.getRoomType();
+    }
+
+
+}
+
+
+
+

@@ -16,17 +16,17 @@ public class RoomTest {
 
     @Before
     public void before(){
-        room = new Room("A1", 3);
+        room = new Room(100.00, 3);
         guests = new ArrayList<Guest>();
         guest = new Guest("Tom", "King",500.00);
         guest2 = new Guest("Andrea", "White", 400.00);
 
     }
 
-    @Test
-    public void canGetNumber(){
-        assertEquals("A1", room.getRoomNumber());
-    }
+   @Test
+   public void canGetPrice(){
+        assertEquals(100.00, room.getPrice(), 0.02);
+   }
 
     @Test
     public void canGetCapacity(){

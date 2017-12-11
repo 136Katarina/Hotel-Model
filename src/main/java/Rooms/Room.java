@@ -5,19 +5,20 @@ import Guests.Guest;
 import java.util.ArrayList;
 
 public class Room {
-    private String number;
-    private Integer capacity;
-    private ArrayList<Guest> guests;
+    protected Integer capacity;
+    protected ArrayList<Guest> guests;
+    protected double price;
 
 
-    public Room(String number, int capacity) {
-        this.number = number;
+    public Room(double price, int capacity) {
+        this.price = price;
         this.capacity = capacity;
         this.guests = new ArrayList<>();
     }
 
-    public String getRoomNumber() {
-        return this.number;
+
+    public double getPrice() {
+        return price;
     }
 
     public int getCapacity() {
@@ -44,5 +45,21 @@ public class Room {
 
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
+    }
+
+    public boolean isEmpty(){
+        return getGuestsCount() == 0;
+    }
+
+    public boolean isFull(){
+        return getGuestsCount() >= capacity;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setGuests(ArrayList<Guest> guests) {
+        this.guests = guests;
     }
 }
